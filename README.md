@@ -229,3 +229,5 @@ src/
 │   └── ValidatorException.php  # 验证异常
 └── Client.php            # 客户端入口
 ```
+
+许可协议： GPL-V3
