@@ -44,22 +44,6 @@ $IM = new OpenImSdk\Client($config, $redis);
 $IM = new OpenImSdk\Client($config, null, '/path/to/cache');
 ```
 
-### Token管理
-
-SDK会自动管理token的获取和缓存，您不需要手动处理token的获取和存储。SDK会根据API返回的过期时间自动管理token的有效期。
-
-```php
-// 获取管理员token（自动缓存）
-$adminToken = $IM->getAdminToken();
-
-// 获取用户token（自动缓存）
-$userToken = $IM->getUserToken('user123');
-
-// 清除token缓存
-$IM->clearToken('user123');
-$IM->clearToken('imAdmin', true); // 清除管理员token
-```
-
 ### 认证管理
 
 ```php
