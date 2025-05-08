@@ -1,0 +1,24 @@
+{
+  "name": "MrYzYs/OpenImSdk",
+  "description": "OpenIM PHP SDK - A PHP client for OpenIM REST API",
+  "keywords": [
+    "openimsdk", "openim", "im", "chat", "messaging"
+  ],
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "mryzys",
+      "email": "mryzys@163.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.5.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "OpenImSdk\\": "src/"
+    }
+  }
+}
