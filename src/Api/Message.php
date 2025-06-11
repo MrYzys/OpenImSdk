@@ -133,7 +133,7 @@ class Message
     {
         $data = [
             'conversationID' => $conversationID,
-            'seq' => $seq,
+            'seq' => intval($seq),
             'userID' => $userID
         ];
         return Utils::send(Url::$revokeMessage, $data, '撤回消息失败', $token);

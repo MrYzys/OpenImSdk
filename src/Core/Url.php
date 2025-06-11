@@ -73,7 +73,7 @@ class Url
     static $clearMsg = '/msg/clear_msg';
     static $delMsg = '/msg/del_msg';
     static $manageSendMsg = '/msg/manage_send_msg';
-    static $revokeMessage = '/msg/revoke_message';
+    static $revokeMessage = '/msg/revoke_msg';
     static $sendBusinessNotification = '/msg/send_business_notification';
     static $getAllConversations = '/msg/get_all_conversations';
     static $getConversation = '/msg/get_conversation';
