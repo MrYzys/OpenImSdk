@@ -210,4 +210,38 @@ class User
     {
         return Utils::send(Url::$getUsersInfo, ['userIDList' => $userIDList], '获取用户信息错误', $token);
     }
+
+    //Header
+    //
+    //Header Name	Example Value	Required	Type	Description
+    //operationID	1646445464564	Required	string	Used for global traceability, suggested as a unique timestamp per request
+    //token	eyJhbxxxx3Xs	Required	string	Admin token
+
+    //Field Name	Required	Type	Description
+    //users	Required	array	List of users
+    //users.userID	Required	string	User ID
+    //users.nickname	Required	string	User nickname
+    //users.faceURL	Required	string	User avatar URL
+    /**
+     * 用户注册
+     * @param string $userID 用户ID
+     * @param string $nickname 昵称
+     * @param string $faceURL 头像地址
+     * @return array
+     */
+    public function userRegister(string $userID, string $nickname = '', string $faceURL = ''): array
+    {
+        // 获取管理员token
+        $adminToken = Utils::getAdminToken();
+        if (!$adminToken) {
+            return ['errCode' => 500, 'errMsg' => '获取管理员token失败'];
+        }
+
+        $data = [
+            'userID' => $userID,
+            'nickname' => $nickname,
+            'faceURL' => $faceURL
+        ];
+        return Utils::send(Url::$userRegister, $data, '注册IM错误', $adminToken);
+    }
 }

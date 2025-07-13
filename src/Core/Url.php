@@ -9,10 +9,10 @@ class Url
     static $getUserToken = '/auth/get_user_token';
     static $forceLogout = '/auth/force_logout';
     static $parseToken = '/auth/parse_token';
-    static $userRegister = '/auth/user_register';
     static $userToken = '/auth/user_token';
 
     // 用户管理
+    static $userRegister = '/user/user_register';
     static $getUsers = '/user/get_users';
     static $getUsersOnlineStatus = '/user/get_users_online_status';
     static $getUsersOnlineTokenDetail = '/user/get_users_online_token_detail';
