@@ -238,9 +238,13 @@ class User
         }
 
         $data = [
-            'userID' => $userID,
-            'nickname' => $nickname,
-            'faceURL' => $faceURL
+            'users' => [
+                [
+                    'userID' => $userID,
+                    'nickname' => $nickname,
+                    'faceURL' => $faceURL
+                ]
+            ]
         ];
         return Utils::send(Url::$userRegister, $data, '注册IM错误', $adminToken);
     }
